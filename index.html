@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #000000;
+            color: #fff;
+            padding: 15px 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-logo img {
+            max-width: 150px;
+            margin-right: 20px;
+        }
+
+        .header-nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+        }
+
+        .header-nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .header-nav ul li:first-child {
+            margin-left: 0;
+        }
+
+        .header-nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Video Player Section */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #000000;
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer img {
+            max-width: 30px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="header-logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+            <nav class="header-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About the Tournament</a></li>
+                    <!-- Add more list elements as needed -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container-fluid mt-5">
+        <!-- Video Player Section -->
+        <div class="row">
+            <div class="col-md-8 offset-md-2 video-container">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" id="youtubeVideo" width="560" height="315" frameborder="0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <!-- Other content goes here -->
+    </div>
+
+    <!-- Footer -->
+    <!-- ... -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        // Update this variable with the YouTube video ID from the backend
+        var videoId = "LJtX0VtNsYE?si=eN-UuzcteZGHr_Ud";
+
+        // Function to load the YouTube video player
+        function loadYouTubeVideo() {
+            var iframe = document.getElementById('youtubeVideo');
+            iframe.src = 'https://www.youtube.com/embed/' + videoId;
+        }
+
+        // Load the initial video when the page loads
+        window.onload = loadYouTubeVideo;
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Art Design Reflection. All rights reserved. Designed by <img src="logo-2.png"
+                    alt="Designer Logo"> </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Your script to update the YouTube video URL can be added here -->
+</body>
+
+</html>
